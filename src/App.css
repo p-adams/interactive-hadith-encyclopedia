@@ -25,6 +25,16 @@ main {
   padding: var(--main-padding);
 }
 
+.biographies-table {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.biographies-table .cell {
+  outline: 1px solid;
+  padding: 4px;
+}
+
 footer {
   grid-area: footer;
   padding: var(--main-padding);
