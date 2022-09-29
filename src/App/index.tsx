@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
-
+import AppAccordion from "../components/AppAccordion";
+import "./index.css";
 type Biography = {
   id: string;
   data: string;
 };
 
-import "./App.css";
 const ENDPOINT = import.meta.env.VITE_API_URL;
 function App() {
   const [bios, setBios] = useState<Biography[]>([]);
   useEffect(() => {
     fetch(ENDPOINT)
       .then((r) => r.json())
-      .then((res: Biography[]) => setBios(res));
-  }, [bios]);
+      .then((res: Biography[]) => setBios(res.slice(0, 5)));
+  }, []);
   return (
     <div className="App">
       <header>
         <h2>Interactive Hadith Encyclopedia</h2>
       </header>
       <main>
-        <div className="biographies-table">
+        <div className="biographies-table rtl-text">
           <div className="cell">id</div>
           <div className="cell">data</div>
           {bios.map((bio, idx) => (

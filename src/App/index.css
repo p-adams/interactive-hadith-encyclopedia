@@ -31,11 +31,16 @@ main {
 }
 
 .biographies-table .cell {
-  outline: 1px solid;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
   padding: 4px;
 }
 
 footer {
   grid-area: footer;
   padding: var(--main-padding);
+}
+
+.rtl-text {
+  direction: rtl;
 }
