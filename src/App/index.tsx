@@ -25,7 +25,6 @@ function App() {
         <div className="biographies-table rtl-text">
           <div className="cell">id</div>
           <div className="cell">data</div>
-
           {data?.biographies.map((biography: any, idx: number) => (
             <React.Fragment key={idx}>
               <div className="cell">{biography.id}</div>
