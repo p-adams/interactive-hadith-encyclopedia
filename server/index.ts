@@ -1,5 +1,6 @@
 import { ApolloServer, gql } from "apollo-server";
 import { ApolloServerPluginLandingPageLocalDefault } from "apollo-server-core";
+
 const typeDefs = gql`
   type Biography {
     id: String
@@ -35,7 +36,7 @@ const resolvers = {
   },
 };
 
-export const server = new ApolloServer({
+const server = new ApolloServer({
   typeDefs,
   resolvers,
   csrfPrevention: true,
