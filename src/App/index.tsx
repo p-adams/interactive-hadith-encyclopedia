@@ -20,6 +20,7 @@ function App() {
         <h2>Interactive Hadith Encyclopedia</h2>
       </header>
       <main>
+        {/* TODO: extract to table component */}
         <div className="biographies-table rtl-text">
           <div className="cell">id</div>
           <div className="cell">data</div>
